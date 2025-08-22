@@ -1,4 +1,4 @@
-local correctKey= "VORTXKEY_GHIIRRM6PXFF"
+local correctKey = "VORTXKEY_GHIIRRM6PXFF"
 
 local player = game.Players.LocalPlayer
 local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
@@ -67,26 +67,11 @@ check.MouseButton1Click:Connect(function()
         status.Text = "✅ Key accepted! Loading script..."
         task.wait(1.5)
         gui:Destroy()
-        -- Simpan key yang benar
-        local dataStore = game:GetService("DataStoreService"):GetDataStore("KeyStore")
-        dataStore:SetAsync(player.UserId, input.Text)
         loadstring(game:HttpGet(_G.scriptURL))()
     else
         status.Text = "❌ Invalid key!"
     end
 end)
 
--- Cek apakah key sudah pernah disimpan
-local function checkSavedKey()
-    local dataStore = game:GetService("DataStoreService"):GetDataStore("KeyStore")
-    local savedKey = dataStore:GetAsync(player.UserId)
-    if savedKey == correctKey then
-        status.Text = "✅ Key accepted! Loading script..."
-        task.wait(1.5)
-        gui:Destroy()
-        loadstring(game:HttpGet(_G.scriptURL))()
-    end
-end
-
 -- URL script utama (raw)
-_G.scriptURL= "https://raw.githubusercontent.com/ZyqRulNafVexMipT/Fisch/main/fishh.lua"
+_G.scriptURL = "https://raw.githubusercontent.com/ZyqRulNafVexMipT/Fisch/main/fishh.lua"
