@@ -1,4 +1,4 @@
-local correctKey= "VORTX_103774654302837"
+local correctKey= "VORTXKEY_GHIIRRM6PXFF"
 
 local player = game.Players.LocalPlayer
 local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
@@ -90,6 +90,3 @@ end
 
 -- URL script utama (raw)
 _G.scriptURL= "https://raw.githubusercontent.com/ZyqRulNafVexMipT/Fisch/main/fishh.lua"
-
--- Cek key yang sudah disimpan saat script dijalankan
-checkSavedKey()
